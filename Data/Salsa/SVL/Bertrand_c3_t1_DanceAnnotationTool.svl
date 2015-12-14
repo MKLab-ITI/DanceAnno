@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sonic-visualiser>
+<sv>
+  <data>
+    <model id="3" name="description" sampleRate="25" start="463" end="845" type="sparse" dimensions="1" resolution="1" notifyOnAdd="true" dataset="2" />
+    <dataset id="2" dimensions="1">
+		<point frame="463" label="forward-basic-step" />
+		<point frame="495" label="backward-basic-step" />
+		<point frame="524" label="forward-basic-step" />
+		<point frame="552" label="preSuzieQ-backward-step" />
+		<point frame="585" label="suzie-q-a" />
+		<point frame="617" label="suzie-q-b" />
+		<point frame="648" label="forward-basic-step" />
+		<point frame="677" label="preDoubleCross-backward-step" />
+		<point frame="714" label="double-cross-a" />
+		<point frame="749" label="double-cross-b" />
+		<point frame="779" label="forward-basic-step" />
+		<point frame="810" label="backward-basic-step" />
+		<point frame="845" label="end" />
+    </dataset>
+  </data>
+  <display>
+    <layer id="1" type="timeinstants" name="Time Instants &lt;2&gt;" model="3"  plotStyle="0" colourName="Orange" colour="#ff9632" darkBackground="false" />
+  </display>
+</sv>

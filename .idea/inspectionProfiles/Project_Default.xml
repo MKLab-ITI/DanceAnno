@@ -1,0 +1,23 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="readsvl" />
+          <option value="readtxt" />
+          <option value="ReadSkel" />
+          <option value="writesvl" />
+          <option value="writetxt" />
+          <option value="DanceAnno_MainGUI.DanceAnno.myframe" />
+          <option value="DanceAnno_MainGUI.DanceAnno.mirrorizeFrame" />
+          <option value="int.bind" />
+          <option value="int.unbind" />
+          <option value="DanceAnno_MainGUI.DanceAnno.root" />
+          <option value="matrix" />
+          <option value="readskel" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

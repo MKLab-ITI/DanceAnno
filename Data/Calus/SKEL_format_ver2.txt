@@ -1,0 +1,66 @@
+SKEL file format (skeletal animation) v.2
+--------------------------------------
+
+ACSII file, containing successive skeletal frames ( only one skeleton per frame is supported for now ).
+Each frame consists of 74 lines of text and has the following structure:
+
+Line count            Description
+-----			---------------------------------
+1               Header
+24				skeleton joint positions (one joint per line)
+1				skeleton joint rotation confidence ( this line contains 24 numbers which represent the confidence in each joint rotation data)
+24				skeleton joint hierarchical orientation quaternions and rotation matrices(one joint per line)
+24				skeleton joint absolute orientation quaternions and rotation matrices (one joint per line)
+
+The header has the form W X Y Z
+where 
+W = frame number. Each skel file begins with 0 frame number and incremens by 1.
+X = frame id
+Y = frame timestamp (kinect timestamp)
+Z = global timestamp (system timestamp)
+
+Each joint position entry has the form
+X Y Z C
+where
+X,Y,Z are the coordinates of the joint location and
+C is the joint confidence
+
+The joint rotations are described by 20 floating point numbers per line ( one line per joint )
+The first 4 numbers is the rotation quaternion in the form ( W X Y Z), and the remaining 16 is the rotation matrix in row major order ( 4x4 matrix , row-by-row )
+
+
+The skeleton consists of 24 joints of which 4 are inactive (zero entries), leaving 20 tracked joints. ( see Microsoft Kinect SDK documentation for more details, link provided below)
+The order of joints is as follows (careful!!!,  this enumeration is more in line with OpenNI libraries, so the order of joints is not the same as in MS SDK)
+		KW_SKEL_HEAD			= 1,
+		KW_SKEL_NECK			= 2,
+		KW_SKEL_TORSO			= 3,
+		KW_SKEL_WAIST			= 4,
+		KW_SKEL_LEFT_COLLAR		= 5, (inactive)
+		KW_SKEL_LEFT_SHOULDER	= 6,
+		KW_SKEL_LEFT_ELBOW		= 7,
+		KW_SKEL_LEFT_WRIST		= 8,
+		KW_SKEL_LEFT_HAND		= 9,
+		KW_SKEL_LEFT_FINGERTIP	=10, (inactive)
+		KW_SKEL_RIGHT_COLLAR	=11, (inactive)
+		KW_SKEL_RIGHT_SHOULDER	=12,
+		KW_SKEL_RIGHT_ELBOW		=13,
+		KW_SKEL_RIGHT_WRIST		=14,
+		KW_SKEL_RIGHT_HAND		=15,
+		KW_SKEL_RIGHT_FINGERTIP	=16, (inactive)
+		KW_SKEL_LEFT_HIP		=17,
+		KW_SKEL_LEFT_KNEE		=18,
+		KW_SKEL_LEFT_ANKLE		=19,
+		KW_SKEL_LEFT_FOOT		=20,
+		KW_SKEL_RIGHT_HIP		=21,
+		KW_SKEL_RIGHT_KNEE		=22,
+		KW_SKEL_RIGHT_ANKLE		=23,
+		KW_SKEL_RIGHT_FOOT		=24	
+
+Additional information can be found here:
+http://msdn.microsoft.com/en-us/library/hh973073.aspx
+http://msdn.microsoft.com/en-us/library/jj131025.aspx
+
+The recorded sequences will consist of a number of skel files, one per device. ( skel, skel_2, skel_3, skel_4)
+In addition a skel file with the fuzed skeleton animation will be provided. 
+The recorded framerate is expected to be 30fps. In case of 15fps recordings, special annotations will be made.
+

@@ -1,0 +1,33 @@
+Mouse buttons:
+    "Left hold": Drag annotation line or playline
+    "Right": Create annotation for level A or rename an existing annotation for any level
+    "Wheel": Zoom plots
+
+Keyboard buttons:
+    "b": Create annotation for level B
+    "d": delete annotation for any level
+    "up arrow": play forward / pause
+    "down arrow": play backward / pause
+    "left arrow": 1 frame left
+    "right arrow": 1 frame right
+    "v": toggle music beats annotation on/off
+
+
+    Copyright (C) 2015 - 2016 Center for Research and Technology Hellas.
+    All rights reserved.
+    Apache 2.0 license; see LICENSE.txt
+    Dimitrios Ververidis for Information Technologies Institute - Mklab
+    http://iti.gr
+
+    This work has been funded from the EU FP7 project 'i-Treasures',
+    2013-2017, Intangible Treasures - Capturing the Intangible
+    Cultural Heritage and Learning the Rare Know-How of Living,
+    Human Treasures FP7-ICT-2011-9-600676-i-Treasures, is an
+    Integrated Project (IP) of the European Union's 7th
+    Framework Programme 'ICT for Access to Cultural
+    Resources' (http://i-treasures.eu)
+
+    This software can be downloaded from:
+    https://github.com/MKLab-ITI/DanceAnno
+
+
